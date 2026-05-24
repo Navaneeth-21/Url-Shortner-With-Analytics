@@ -49,7 +49,7 @@ Redirect to the original URL.
 
 ### GET `/stats/:code`
 Get analytics for a short URL.
-Example response:
+ - Example response:
 ```json
 {
   "shortCode": "myalias",
@@ -68,21 +68,21 @@ Example response:
 Check if the service is running.
 
 ## Setup
- - Install dependencies:
-   ```bash
+ 1. Install dependencies:
+    ```bash
     npm install
-   ```
- - Configure .env and update the .env.example
- - Start PostgreSQL and Redis
- - Generate Prisma client:
-   ``` bash
+    ```
+ 2. Configure .env and update the .env.example
+ 3. Start PostgreSQL and Redis
+ 4. Generate Prisma client:
+    ``` bash
     npx prisma generate
-   ```
- - Run migrations:
+    ```
+5. Run migrations:
    ``` bash
     npx prisma migrate dev --name init
    ```
- - Start the server:
+6. Start the server:
    ``` bash
     npm run start:dev
    ```
